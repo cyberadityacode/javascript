@@ -1,5 +1,5 @@
 
-# 🎲 Responsive Dice Roller Game
+# 🎲 Dice Roller Game
 
 A fun and interactive **Dice Roller** built using **HTML, CSS, and JavaScript**. This lightweight web app allows users to roll a digital die by clicking on it — complete with responsive design and a satisfying click sound!
 
