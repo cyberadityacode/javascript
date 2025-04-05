@@ -17,7 +17,7 @@ A fun and interactive **Dice Roller** built using **HTML, CSS, and JavaScript**.
 
 ## 📸 Preview
 
-![Dice Roller Preview]('Output Design.png')
+![Dice Roller Preview](output.png)
 
 ---
 
