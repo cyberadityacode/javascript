@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parent-card{
+    width: 100%;
+    max-width: 8rem;
+    min-height: 3rem;
+    /* background-color: bisque; */
+    margin: auto;
+}
+
+.parent-card span{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid tomato;
+    border-radius: 100%;
+    max-width: 2rem;
+    min-height: 2rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+#color-teal{
+    background-color: teal;
+}
+
+#color-red{
+    background-color: red;
+}
+#color-blue{
+    background-color: blue;
+}
