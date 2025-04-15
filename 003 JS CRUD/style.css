@@ -1,0 +1,43 @@
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+button{
+    border-radius: 0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    border:solid tomato;
+}
+
+.btn-delete {
+    background-color: rgb(215, 93, 93);
+}
+
+.btn-edit{
+    background-color: rgb(95, 165, 197);
+
+}
+.add-btn{
+    background-color:rgb(7, 88, 9) ;
+}
+
+#taskTable {
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+tr:hover{
+    background-color: #dddddd75;;
+}
