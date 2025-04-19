@@ -9,13 +9,17 @@ body {
 .title {
   font-weight: 800;
 }
+
 .search-container{
-    padding: 35px 10px;
+    padding: 35px 5px;
+    max-width: 1200px;
     display: flex;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: flex-start;
+    margin-inline: auto;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 30px;
+    background-color: #3f69a8;
+    flex-wrap: wrap;
 }
 input[type="search"] {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg");
@@ -23,9 +27,10 @@ input[type="search"] {
   background-repeat: no-repeat;
   background-position: 10px center;
 
-  max-width: 40rem;
+  max-width: 18.4rem;
   width: 100%;
-  padding: 7px 8px 7px 30px;
+  padding: 9px 12px 8px 29px;
+  margin-left: 20px;
   font-size: 16px;
   border-radius: 5px;
 }
@@ -33,6 +38,15 @@ input[type="search"]:focus {
   box-shadow: 0 0 3px 0 #3f69a8;
   border-color: #3f69a8;
   outline: none;
+}
+.region{
+  max-width: 20rem;
+  width: 100%;
+  padding: 9px 12px 8px 29px;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 16px;
+  border-radius: 5px;
 }
 .header-container {
   position: fixed;
@@ -62,6 +76,7 @@ main {
   display: flex;
   gap: 50px;
   flex-wrap: wrap;
+  background-color: pink;
   justify-content: space-between;
 }
 
@@ -101,6 +116,14 @@ main {
   }
   .country-card {
     margin: 0 auto;
+  }
+  .region{
+    margin-top: 10px;
+    margin-right: 10;
+    width: 83%;
+  }
+  input[type="search"]{
+    width: 83%;
   }
 }
 
