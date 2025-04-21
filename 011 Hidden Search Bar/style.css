@@ -1,0 +1,42 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.search-box{
+  position: relative;
+  height: 50px;
+}
+.search-box input{
+  background-color:#fff;
+  padding: 5px;
+  margin: 0;
+  height: 50px;
+  width: 50px;
+  transition: width 0.3s ease;
+}
+
+button{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.search-box.active input{
+  width: 200px;
+  outline: none;
+}
+.search-box.search-box.active button{
+  transform: translateX(198px);
+}
