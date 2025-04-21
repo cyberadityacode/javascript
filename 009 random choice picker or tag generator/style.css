@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-color: #2B88F0;
+    color: #ffff;
+    font-family: cursive;
+    font-size: clamp(0.8em, -0.5rem + 1vw, 3.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.parent-container {
+    max-width: 40rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+textarea{
+    font-size: 20px;
+    max-width: 40rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.tag{
+    border: 1px solid brown;
+    color: #ffff;
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-size: larger;
+    margin: 0 5px 10px 0;
+}
+.tag.highlight{
+    background-color: tan;
+}
