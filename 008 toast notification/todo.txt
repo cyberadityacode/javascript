@@ -1,0 +1,1 @@
+- create an array of message type & select random message by math random
