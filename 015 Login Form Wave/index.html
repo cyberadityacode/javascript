@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Login Form Wave</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form >
+            <div class="form-control">
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+<!-- We want to use js to wrap each letter in a span
+ and we will have transition on that span to move it up
+  transform: translateY value to move it up with our
+  transition to make it smooth
+  and in js when we wrap a span arrount each letter
+  we will add transition delay to each one that increase per letter
+  such that when one goes up, the another one goes later.
+  e then m then a then i then l
+  thats give us the wave effect
+  -->
+<!-- 
+  <label >
+    <span style="transition-delay: 0ms;">E</span>
+    <span style="transition-delay: 50ms;">M</span>
+    <span style="transition-delay: 100ms;">A</span>
+    <span style="transition-delay: 150ms;">I</span>
+    <span style="transition-delay: 175ms;">L</span>
+  </label> -->
+
+            <div class="form-control">
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+
+            <button class="btn">Login</button>
+            <p class="text">Don't Have an account? <a href="#">Register</a></p>
+        </form>
+    </div>
+</body>
+</html>
