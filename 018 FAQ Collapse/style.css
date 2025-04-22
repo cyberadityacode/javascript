@@ -1,0 +1,92 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+header{
+    position: fixed;
+    top: 20px;
+}
+.faq-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 20px;
+    border: 2px solid tomato;
+}
+
+/* .faq{
+    border: 1px solid rgb(27, 31, 31);
+    padding: 10px 20px;
+} */
+
+.faq{
+    border: 1px solid teal;
+    padding: 30px 20px;
+    position: relative;
+}
+.faq.active{
+    background-color: white;
+}
+
+.faq .faq-text{
+    display: none;
+}
+.faq.faq.active .faq-text{
+    display: block;
+}
+
+.faq::before,
+.faq::after{
+    content: "\f075";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #02000021;
+    font-size: 30px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.btn-toggle{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    outline: 0;
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    border-radius: 50%;
+}
+.btn-toggle:focus{
+    outline: 0;
+}
+.btn-toggle #cross{
+    display: none;
+}
+.faq.active .btn-toggle #cross{
+    display: block;
+}
+.faq.active .btn-toggle #down{
+    display: none;
+}
+.faq button:active{
+    box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.3);
+}
+
+.faq .faq-text{
+    margin-top: 10px;
+}
