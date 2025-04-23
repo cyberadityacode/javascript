@@ -1,0 +1,20 @@
+This interactive UI demonstrates a fluid-filled container (styled as water) whose wave height changes dynamically based on a range slider input. It simulates the effect of “filling” or “draining” a container and visually represents the current level with both a moving label and a wave animation.
+
+Key features:
+
+A wave that rises or falls based on slider value.
+
+A label that moves in sync with the slider's thumb and updates the value in real-time.
+
+Smooth, animated wave effect using pure CSS @keyframes.
+
+Custom scale function: Converts slider values from one range (0–100) to another (e.g., -95% to -200%) for mapping values smoothly.
+
+Learning Highlights
+How to manipulate CSS pseudo-elements using JavaScript through CSS variables.
+
+Real-world use of range sliders beyond form inputs.
+
+Mastery over dynamic styling using style.setProperty().
+
+Improved visual feedback using motion and value sync.
