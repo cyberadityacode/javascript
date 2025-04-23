@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background: linear-gradient(direction, color1, color2, ...);
+ */
+    height: 100vh;
+    /* background: linear-gradient(rgba(228, 190, 190, 0.487),rgba(19, 19, 23, 0.285)); */
+    /* background: linear-gradient(to top, rgba(230, 211, 211, 0.66), rgba(0, 0, 0, 0.709)); */
+    background-image: linear-gradient(
+        to bottom right, #00000078 40%, transparent
+    );
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    transition: rotate 1.5s ease;
+    
+}
+.container{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    bottom: 56px;
+    right: 69px;
+    border: 2px solid rgba(255, 0, 0, 0.792);
+    /* background: linear-gradient(rgba(255, 255, 8, 1.412), rgba(198, 30, 14, 8.524)); */
+    background: linear-gradient(to bottom right, rgba(255, 255, 8, 1.412), rgba( 270, 9, 5, 8.524));
+    animation: rotateInfinite 5s linear infinite;
+}
+
+@keyframes rotateInfinite {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+/* 
+Top to Bottom Gradient (default direction):
+background: linear-gradient(red, blue);
+Left to Right Gradient:background: linear-gradient(to right, red, blue);
+Diagonal Gradient:background: linear-gradient(to bottom right, red, blue);
+Gradient with Multiple Color Stops:
+ linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+
+ Gradient with Color Stop Positions:
+ background: linear-gradient(to right, red 20%, yellow 50%, green 80%);
+
+ Pro Tip:
+
+ You can also combine gradients with transparency using RGBA or the transparent keyword:
+ background: linear-gradient(to right, rgba(255,0,0,0.5), transparent);
+*/
