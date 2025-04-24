@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.search-header input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.list-user{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    background-color: antiquewhite;
+
+    max-height: 150px; /* Set the max height as per your design */
+    overflow-y: auto;
+}
+
+.list-user ul {
+    width: 100%;
+    
+}
+ul li{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 20px;
+}
+.list-user ul li img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid lightblue;
+    /* float: left; */
+}
+
+.hide {
+    display: none;
+}

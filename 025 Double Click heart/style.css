@@ -1,0 +1,45 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+}
+
+.container .card{
+  
+  display: flex;
+  justify-content: center;
+  background-color: yellowgreen;
+  border: 2px solid red;
+}
+.container .card img{
+  display: flex;
+  width: 20rem;
+  height: 20rem;
+}
+.container .card span{
+  position: absolute;
+  font-size: 30px;
+  top: 300px;
+  left: 350px;
+  
+}
+.container .card span i{
+  animation: grow 0.6s forwards;
+  transform: translate(-50%, -50%) scale(0);
+}
+@keyframes grow{
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -80%) scale(1.4);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -150%) scale(1.6);
+    opacity: 0;
+  }
+}
