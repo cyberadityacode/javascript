@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+    <title>Combined Assignment Operators </title>
+</head>
+<body>
+    <h1>Map, Filter, Reduce</h1>
+    <a href="taskmapfilter.html">Task of Map and Filter</a>
+    <code>
+        Nice! This is a common yet crucial distinction in JavaScript functional programming. Here's a breakdown of the **difference between `map()` and `filter()`**:
+
+---
+
+### 🔁 `map()`: **Transform** each element
+- **Purpose**: To **transform** every item in an array.
+- **Returns**: A new array of **same length** as the original.
+- **Each item is the result of the callback function**.
+
+#### Example:
+```javascript
+const numbers = [1, 2, 3];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // [2, 4, 6]
+```
+
+---
+
+### 🔍 `filter()`: **Select** certain elements
+- **Purpose**: To **filter out** elements based on a condition.
+- **Returns**: A new array of **equal or shorter length**.
+- **Only includes elements where the callback returns `true`**.
+
+#### Example:
+```javascript
+const numbers = [1, 2, 3, 4];
+const evens = numbers.filter(num => num % 2 === 0);
+console.log(evens); // [2, 4]
+```
+
+---
+
+### 🧠 In short:
+| Feature        | `map()`                         | `filter()`                     |
+|----------------|----------------------------------|--------------------------------|
+| Use case       | Transform each item             | Select items based on a condition |
+| Return value   | New array, same length          | New array, possibly shorter    |
+| Callback       | Must return a transformed value | Must return `true` or `false`  |
+
+---
+
+If you're chaining them together, it looks like this:
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const evenSquares = numbers
+  .filter(n => n % 2 === 0)   // [2, 4]
+  .map(n => n * n);           // [4, 16]
+```
+
+Let me know if you want to see real-world use cases or performance notes too!
+    </code>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators</title>
+    <script src="app.js"></script>
+</head>
+<body style="font-family: cursive;">
+    <h1>Logical Operators</h1>
+    <ul>
+        <li>&& (And)</li>
+        <li>|| (Or)</li>
+        <li>! (Not)</li>
+    </ul>
+
+    <code>
+        Great question! You're absolutely right — when you run:
+
+```javascript
+console.log("hello");
+```
+
+You’ll see this in the console:
+
+```
+hello
+undefined
+```
+
+### Why "hello"?
+That's the output of the `console.log("hello")` call — it logs `"hello"` to the console.
+
+### Why "undefined"?
+That part **comes from the return value of `console.log()`**.
+
+- `console.log()` doesn't return any value; it just performs the action of printing to the console.
+- In JavaScript, if a function doesn’t explicitly return something, it **returns `undefined` by default**.
+
+So, when you're running this in a browser console (like Chrome DevTools), it not only shows what was logged (`hello`), but it also shows the **result of the last expression**, which in this case is the return value of `console.log()`, i.e., `undefined`.
+
+### TL;DR:
+- `"hello"` is printed by `console.log`.
+- `undefined` is printed by the console itself to show the return value of that `console.log()` expression.
+
+Let me know if you want a demo with another function for comparison!
+    </code>
+<hr>
+
+<span>
+    Great question — this is a subtle but **important** distinction in JavaScript!
+
+    ---
+    
+    ### 🔹 `true` (Boolean literal)
+    - This is a **Boolean primitive value**.
+    - It is **one of only two** Boolean values: `true` and `false`.
+    - Used when something is explicitly a Boolean type.
+    
+    ```javascript
+    const isAvailable = true;
+    console.log(typeof isAvailable); // "boolean"
+    ```
+    
+    ---
+    
+    ### 🔸 `truthy` (Concept)
+    - "Truthy" is **any value that is considered `true` when evaluated in a Boolean context**, like inside an `if` statement.
+    - A value doesn't have to be `true` to be **truthy**.
+    
+    #### ✅ Examples of **truthy** values:
+    ```javascript
+    if ("hello") console.log("This is truthy!"); // runs
+    if (42) console.log("This is truthy!"); // runs
+    if ([]) console.log("An empty array is truthy!"); // runs
+    if ({}) console.log("An empty object is truthy!"); // runs
+    ```
+    
+    #### 🚫 Examples of **falsy** values:
+    Only **7 values** are falsy in JavaScript:
+    ```javascript
+    false
+    0
+    -0
+    0n // BigInt zero
+    "" // empty string
+    null
+    undefined
+    NaN
+    ```
+    
+    ---
+    
+    ### 🔍 Quick Comparison:
+    | Concept       | Type     | Example         | Boolean Evaluation |
+    |---------------|----------|------------------|---------------------|
+    | `true`        | Boolean  | `true`           | `true`              |
+    | `"hello"`     | String   | `"hello"`        | truthy              |
+    | `1`           | Number   | `1`              | truthy              |
+    | `[]`          | Object   | `[]`              | truthy              |
+    | `false`       | Boolean  | `false`          | falsy               |
+    | `0`           | Number   | `0`              | falsy               |
+    
+    ---
+    
+    ### ✅ In Summary:
+    - `true` is a specific Boolean value.
+    - `truthy` means “**any value** that JavaScript interprets as true in a Boolean context.”
+    
+    Let me know if you want a fun code snippet to test truthy/falsy values interactively!
+
+</span>
+</body>
+</html>

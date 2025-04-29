@@ -1,0 +1,21 @@
+.container {
+    color: green;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+img {
+    width: 50px;
+}
+
+.my-img{
+    border-radius: 50%;
+    background-color: teal;
+}
+
+
+.img-container{
+    border: 1px solid teal;
+    text-align: center;
+}

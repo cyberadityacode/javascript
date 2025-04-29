@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent-card">
+      <h1>Change background-color</h1>
+      <span id="color-teal"></span>
+      <span id="color-red"></span>
+      <span id="color-blue"></span>
+      <input type="color" id="custom-color-picker" />
+      <label for="custom-color-picker">Pick</label>
+    </div>
+
+    <script>
+      // lengthy procedure
+      /* document.querySelector("#color-teal").onclick = () => {
+        console.log("teal");
+        document.querySelector("body").style.backgroundColor = "teal";
+      };
+      document.querySelector("#color-red").onclick = () => {
+        console.log("red");
+        document.querySelector("body").style.backgroundColor = "red";
+      };
+      document.querySelector("#color-blue").onclick = () => {
+        console.log("blue");
+        document.querySelector("body").style.backgroundColor = "blue";
+      }; */
+
+      //   short & smart procedure
+
+      const colors = ["teal", "red", "blue"];
+
+      colors.forEach((color) => {
+        document
+          .querySelector(`#color-${color}`)
+          .addEventListener("click", () => {
+            console.log(color);
+            document.body.style.backgroundColor = color;
+          });
+      });
+
+    //   super smart procedure
+      const colorPicker = document.querySelector("#custom-color-picker");
+
+      colorPicker.addEventListener("input", (event) => {
+        const pickedColor = event.target.value;
+        console.log("Picked:", pickedColor);
+        document.body.style.backgroundColor = pickedColor;
+      });
+    </script>
+  </body>
+</html>

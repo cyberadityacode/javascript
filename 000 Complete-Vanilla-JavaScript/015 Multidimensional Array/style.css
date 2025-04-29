@@ -1,0 +1,32 @@
+ul{
+    list-style: none;
+    
+}
+/* li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+.tic-tac-toe{
+    max-width: 16rem;
+    width: 100%;
+    min-height: 15rem;
+    background-color: wheat;
+    margin: auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 5rem);
+    grid-template-rows: repeat(3, 5rem);
+    
+}
+.tic-tac-toe > div{
+    /* padding: 10px; */
+    background-color: #EFCB68;
+    display: grid;
+    place-items: center;
+}
+.tic-tac-toe > div:hover{
+    box-shadow: 4px 4px 4px rgb(39 25 49 / 39%);
+}
