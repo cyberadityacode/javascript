@@ -102,3 +102,20 @@ const [first, ...rest] = colors
 console.log(first);
 console.log(rest);
 
+
+// https://chatgpt.com/c/68261fcb-6850-8009-824b-dbd17454bd3d
+
+// Pro Level Task Remaining
+//  Pro Level
+// 8. Deep Merge of Nested Objects (One-Level Only)
+
+// Merge two objects deeply (one level), where nested properties should also be merged, not overwritten.
+
+
+const objA = { user: { name: "Alice", age: 25 } };
+const objB = { user: { age: 30, city: "NY" } };
+// Merge to get { user: { name: "Alice", age: 30, city: "NY" } }
+
+const mergedObjAB = { ...objA, ...objB}
+console.log("merged object AB - ",mergedObjAB);
+console.log(mergedObjAB);
