@@ -1,4 +1,4 @@
-### 🧠 What is a *Virtual Property*?
+###  What is a *Virtual Property*?
 
 A **virtual property** is a property that **doesn't physically exist** on an object but can be **accessed as if it does**, often with dynamic behavior or computation behind the scenes.
 
@@ -9,7 +9,7 @@ You typically implement virtual properties using:
 
 ---
 
-### ✅ Simple Example with Proxy
+###  Simple Example with Proxy
 
 ```js
 const person = {
@@ -29,11 +29,11 @@ const withVirtualProps = new Proxy(person, {
 console.log(withVirtualProps.fullName); // "Aditya Dubey"
 ```
 
-➡️ Here, `fullName` is a **virtual property** — it’s not stored on the object, but you can access it like a normal property.
+ Here, `fullName` is a **virtual property** — it’s not stored on the object, but you can access it like a normal property.
 
 ---
 
-### 🧰 Use Cases of Virtual Properties
+###  Use Cases of Virtual Properties
 
 | Use Case                       | Description                                                      |
 | ------------------------------ | ---------------------------------------------------------------- |
@@ -46,7 +46,7 @@ console.log(withVirtualProps.fullName); // "Aditya Dubey"
 
 ---
 
-### 📦 Example: Masking Email (Security Use)
+###  Example: Masking Email (Security Use)
 
 ```js
 const user = {
@@ -68,12 +68,9 @@ console.log(maskedUser.maskedEmail); // a*****@example.com
 
 ---
 
-### ⛔ Important Notes
+###  Important Notes
 
 * Virtual properties **aren’t enumerable** unless you customize traps like `ownKeys()` or `has()`.
 * You can only *read* from them unless you define custom `set()` behavior.
 * Ideal when you want **readable, clean APIs** without polluting the data model.
 
----
-
-Would you like to see how to implement writable virtual properties or use this idea in a form validator, API layer, or database model?
