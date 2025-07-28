@@ -42,3 +42,20 @@ for (var i = 0; i < 3; i++) {
 }
 //output 012 - we have used IIFE
 
+// B. Function Factory Pattern
+
+/* 
+Refer: readme.md for detailed explaination
+*/
+
+function multiplier(factor) {
+  return function (number) {
+    return number * factor;
+  };
+}
+
+const double = multiplier(2);
+console.log("Function Factory Example: ", double(3)); // 6 - refer readme.md
+
+
+
