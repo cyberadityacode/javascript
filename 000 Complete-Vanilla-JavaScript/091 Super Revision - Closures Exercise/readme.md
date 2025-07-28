@@ -99,3 +99,9 @@ Function Factory Example: 6
 * Then, you called that new function with a number and logged the result.
 
 ---
+
+
+## 3.  Private Variables using Closures
+
+
+

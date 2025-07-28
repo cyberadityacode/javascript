@@ -57,5 +57,30 @@ function multiplier(factor) {
 const double = multiplier(2);
 console.log("Function Factory Example: ", double(3)); // 6 - refer readme.md
 
+// 3.  Private Variables using Closures
+/* 
 
+*/
 
+function createCounter() {
+  let count = 0; //private variable
+
+  return {
+    increment() {
+      count++;
+      console.log("Increment function inside createCounter: ", count);
+    },
+    decrement() {
+      count--;
+      console.log("Decrement function inside createCounter: ", count);
+    },
+    get() {
+      return count;
+    },
+  };
+}
+
+const counter = createCounter();
+counter.increment();
+counter.decrement();
+console.log("Get Counter of createCounter: ", counter.get());
