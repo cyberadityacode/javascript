@@ -110,7 +110,23 @@ const AuthModule = (function () {
   };
 })();
 
-AuthModule.login("admin", "123"); 
+AuthModule.login("admin", "123");
 console.log(AuthModule.getToken()); // abcdef
 
 console.log(AuthModule.token); //undefined
+
+/* 
+## 5. Memory Leak with Closures
+*/
+
+function createLargeClosure() {
+  const largeArray = new Array(1000000).fill("leak"); // large memory allocation
+
+  document
+    .getElementById("leaky-btn")
+    .addEventListener("click", function handler() {
+      // This closure keeps 'largeArray' in memory
+      console.log("Button clicked");
+    });
+}
+createLargeClosure();

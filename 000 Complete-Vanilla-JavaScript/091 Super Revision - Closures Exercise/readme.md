@@ -104,9 +104,20 @@ Function Factory Example: 6
 
 ## 4. Module Pattern (Closures + IIFE)
 
-The Module Pattern in JavaScript is a design pattern used to encapsulate private variables and functions, exposing only a public API. 
+The Module Pattern in JavaScript is a design pattern used to encapsulate private variables and functions, exposing only a public API.
 
 It's a way to achieve data privacy, separation of concerns, and code organization—especially before ES6 introduced native modules.
 
+## 5. Memory Leak with Closures
 
+A memory leak happens when memory that is no longer needed is not released. Over time, this can cause performance issues and crashes.
+Common Causes of Memory Leaks:
 
+- Global variables
+- Forgotten timers or callbacks
+- Detached DOM nodes
+- Closures capturing large scopes
+
+A closure is a function that "remembers" the variables from its lexical scope even when the function is executed outside that scope.
+
+Closures can cause memory leaks if they unintentionally hold onto objects that are no longer needed.
