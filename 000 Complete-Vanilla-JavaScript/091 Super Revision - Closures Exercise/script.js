@@ -84,3 +84,33 @@ const counter = createCounter();
 counter.increment();
 counter.decrement();
 console.log("Get Counter of createCounter: ", counter.get());
+
+/* 4.  Module Pattern (Closures + IIFE) */
+//
+
+const AuthModule = (function () {
+  let token = null; //private
+
+  function login(user, pass) {
+    if (user === "admin" && pass === "123") {
+      token = "abcdef";
+      console.log("Login Successfull");
+    } else {
+      console.log("Access Denied");
+    }
+  }
+
+  function getToken() {
+    return token;
+  }
+
+  return {
+    login,
+    getToken,
+  };
+})();
+
+AuthModule.login("admin", "123"); 
+console.log(AuthModule.getToken()); // abcdef
+
+console.log(AuthModule.token); //undefined

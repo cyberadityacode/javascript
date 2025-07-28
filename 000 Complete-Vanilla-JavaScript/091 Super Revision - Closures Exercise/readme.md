@@ -23,7 +23,7 @@ So, each of the setTimeout functions sees the same i, which is now 3.
 
 ## 3- Exercise : Function Factory
 
-A Function Factory is a function that returns another function, often with some pre-configured behavior or data. 
+A Function Factory is a function that returns another function, often with some pre-configured behavior or data.
 
 It's a way to generate multiple customized functions from a common blueprint.
 
@@ -41,10 +41,10 @@ function multiplier(factor) {
 }
 ```
 
-* This is a **function factory** — a function that creates and returns another function.
-* It takes a single argument called `factor`.
-* Inside it, it returns a new **anonymous function** that takes another argument `number`.
-* That inner function multiplies `number` by `factor` and returns the result.
+- This is a **function factory** — a function that creates and returns another function.
+- It takes a single argument called `factor`.
+- Inside it, it returns a new **anonymous function** that takes another argument `number`.
+- That inner function multiplies `number` by `factor` and returns the result.
 
 #### Example:
 
@@ -64,14 +64,14 @@ function (number) {
 const double = multiplier(2);
 ```
 
-* Here, we are calling `multiplier(2)`.
-* As explained, this returns a new function that multiplies a number by 2.
-* That returned function is stored in the variable `double`.
+- Here, we are calling `multiplier(2)`.
+- As explained, this returns a new function that multiplies a number by 2.
+- That returned function is stored in the variable `double`.
 
 So now:
 
 ```javascript
-double(3) // means: 3 * 2 => 6
+double(3); // means: 3 * 2 => 6
 ```
 
 ---
@@ -82,9 +82,9 @@ double(3) // means: 3 * 2 => 6
 console.log("Function Factory Example: ", double(3));
 ```
 
-* Calls the `double` function with argument `3`.
-* `double(3)` → `3 * 2` → `6`
-* Logs:
+- Calls the `double` function with argument `3`.
+- `double(3)` → `3 * 2` → `6`
+- Logs:
 
 ```
 Function Factory Example: 6
@@ -92,16 +92,21 @@ Function Factory Example: 6
 
 ---
 
-###  **Summary**
+### **Summary**
 
-* You created a **function factory** with `multiplier`.
-* You used it to create a **custom multiplier function**: `double`.
-* Then, you called that new function with a number and logged the result.
+- You created a **function factory** with `multiplier`.
+- You used it to create a **custom multiplier function**: `double`.
+- Then, you called that new function with a number and logged the result.
 
 ---
 
+## 3. Private Variables using Closures
 
-## 3.  Private Variables using Closures
+## 4. Module Pattern (Closures + IIFE)
+
+The Module Pattern in JavaScript is a design pattern used to encapsulate private variables and functions, exposing only a public API. 
+
+It's a way to achieve data privacy, separation of concerns, and code organization—especially before ES6 introduced native modules.
 
 
 
