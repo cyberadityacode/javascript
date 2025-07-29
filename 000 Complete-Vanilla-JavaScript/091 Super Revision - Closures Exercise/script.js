@@ -158,3 +158,38 @@ const greetOnce = once(sayHello);
 greetOnce("aditya");
 greetOnce("cyberaditya");
 
+/* Ex. 8 */
+// Simple Cache System Using Closure
+
+function createCache() {
+  const cache = {};
+
+  return function (key, computeFn) {
+    if (cache.hasOwnProperty(key)) {
+      console.log("Fetching from cache:", key);
+      return cache[key];
+    } else {
+      console.log("Computing and caching", key);
+      const result = computeFn();
+      cache[key] = result;
+      return result;
+    }
+  };
+}
+
+// how to use cache function
+const cachedFunction = createCache();
+
+// First call, computes and stores in cache
+
+const result1 = cachedFunction("square_5", () => 5 * 5);
+console.log(result1);
+
+// second time call with same key: retrieves from cache
+const result2 = cachedFunction("square_5", () => 5 * 5);
+console.log(result2); //25 from cache
+
+// trying different key will invoke re-computation
+
+const result3 = cachedFunction("square_6", () => 6 * 6);
+console.log(result3);
