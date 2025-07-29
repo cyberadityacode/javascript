@@ -35,3 +35,22 @@ console.log(greeter.setName("aditya"));
 console.log(greeter.greet());
 console.log(greeter.setName("cyberaditya")); //false
 console.log(greeter.greet()); //Hello aditya
+
+/* Write a closure that returns a function to check 
+if a number is even or odd */
+
+function evenOrOddChecker() {
+  return function (number) {
+    if (typeof number !== "number") {
+      return "Input must be a number";
+    }
+    return number % 2 === 0 ? "Even" : "Odd";
+  };
+}
+
+// Usage
+
+const checkEvenOrOdd = evenOrOddChecker();
+console.log(checkEvenOrOdd(4)); //Even
+console.log(checkEvenOrOdd(7)); //Odd
+console.log(checkEvenOrOdd("aditya")); //Input must be a number
