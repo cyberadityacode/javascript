@@ -130,3 +130,31 @@ function createLargeClosure() {
     });
 }
 createLargeClosure();
+
+// Continue from Ex. 7  Q1. Create a once function that runs a function only once.
+
+// Run only once
+
+function once(fn) {
+  let called = false;
+  let result;
+
+  return function (...args) {
+    if (!called) {
+      result = fn.apply(this, args);
+      called = true;
+    }
+    return result;
+  };
+}
+
+function sayHello(name) {
+  console.log(`Hello , ${name}`);
+  return `Greeted ${name}`;
+}
+
+const greetOnce = once(sayHello);
+
+greetOnce("aditya");
+greetOnce("cyberaditya");
+
