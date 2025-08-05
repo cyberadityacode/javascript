@@ -54,3 +54,46 @@ const checkEvenOrOdd = evenOrOddChecker();
 console.log(checkEvenOrOdd(4)); //Even
 console.log(checkEvenOrOdd(7)); //Odd
 console.log(checkEvenOrOdd("aditya")); //Input must be a number
+
+/* 
+3 Implement a function memoize(fn) that caches the result of fn.
+*/
+
+// https://chatgpt.com/c/687a90af-b3e4-8009-93e2-f8e9872eb025
+
+function memoize(fn) {
+  const cache = new Map();
+
+  return function (...args) {
+    const key = JSON.stringify(args);
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+
+    const result = fn(...args);
+    cache.set(key, result);
+    return result;
+  };
+}
+/* 
+How It Works:
+1. cache is a Map used to store function results.
+
+2. The arguments are serialized using JSON.stringify to create a unique key for each set of arguments.
+
+3. If the result for the given arguments is already in the cache, it is returned directly.
+
+4. Otherwise, it computes the result, stores it in the cache, and returns it.
+*/
+
+const slowSquare = (n) => {
+  console.log(`Calculating square of ${n}`);
+  return n * n;
+};
+
+const memoizedSquare = memoize(slowSquare);
+
+console.log(memoizedSquare(4)); // Logs: Calculating square of 4 → 16
+console.log(memoizedSquare(4)); // Logs: nothing → 16 (from cache)
+
+// Revise one more time: how memoize function works
