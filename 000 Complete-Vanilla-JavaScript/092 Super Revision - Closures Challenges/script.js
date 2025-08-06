@@ -59,8 +59,6 @@ console.log(checkEvenOrOdd("aditya")); //Input must be a number
 3 Implement a function memoize(fn) that caches the result of fn.
 */
 
-// https://chatgpt.com/c/687a90af-b3e4-8009-93e2-f8e9872eb025
-
 function memoize(fn) {
   const cache = new Map();
 
@@ -97,3 +95,34 @@ console.log(memoizedSquare(4)); // Logs: Calculating square of 4 → 16
 console.log(memoizedSquare(4)); // Logs: nothing → 16 (from cache)
 
 // Revise one more time: how memoize function works
+
+/* 
+4. Create a rateLimiter(fn, limit) that allows a function to be called only limit times. 
+*/
+
+function rateLimiter(fn, limit) {
+  let count = 0;
+
+  return function (...args) {
+    if (count < limit) {
+      count++;
+      // return fn.apply(this, args);
+      return fn(...args);
+    } else {
+      console.warn("Rate Limit Exceeded");
+      return undefined;
+    }
+  };
+}
+
+// example usage
+function sayHello(name) {
+  console.log(`Hello, ${name}`);
+}
+
+const limitedHello = rateLimiter(sayHello, 3);
+
+limitedHello("shambhu");
+limitedHello("shankar");
+limitedHello("mahadev");
+limitedHello("bholenath");
