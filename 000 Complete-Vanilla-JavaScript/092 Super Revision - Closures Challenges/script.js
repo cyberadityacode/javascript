@@ -126,3 +126,47 @@ limitedHello("shambhu");
 limitedHello("shankar");
 limitedHello("mahadev");
 limitedHello("bholenath");
+
+/* 
+Simulate a private bank account using closures. Implement deposit, withdraw, and balance.
+*/
+
+function createBankAccount(initialBalance = 0) {
+  let balance = initialBalance; //private variable
+
+  return {
+    deposit(amount) {
+      if (amount < 0) {
+        console.warn("Deposit must be greater than zero");
+        return;
+      }
+      balance += amount;
+      console.log(`Deposited : $${amount}`);
+    },
+
+    withdraw(amount) {
+      if (amount <= 0) {
+        console.warn("Withdraw must be greater than zero");
+        return;
+      }
+      if (amount > balance) {
+        console.warn("Insufficient Funds");
+        return;
+      }
+      balance -= amount;
+      console.log(`Withdrew: $${amount}`);
+    },
+    balance() {
+      console.log(`Current Balance : $${balance}`);
+    },
+  };
+}
+
+const myAccount = createBankAccount(1000);
+myAccount.deposit(77);
+myAccount.balance();
+myAccount.deposit(3);
+
+myAccount.balance();
+myAccount.withdraw(3);
+myAccount.balance();
