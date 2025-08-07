@@ -53,4 +53,32 @@ person1.greet.call(person2, 10);
  Use Case: Sharing a common method across different users or objects without duplicating code.
 */
 
+// 2. Converting Array-like Objects
+/* 
+In older JavaScript or vanilla environments (e.g., browsers),
+ when you get something like an arguments object or NodeList,
+  it’s not a real array — 
+but you want to use array methods on it.
+*/
+
+function printArgs() {
+  const argsArray = Array.prototype.slice.call(arguments);
+  console.log(argsArray);
+}
+
+// Modern Alternative (ES6+):
+// You can do the same thing much more cleanly with the rest parameter syntax:
+
+function printArgsModern(...argsArray) {
+  console.log(argsArray);
+}
+/* 
+Rest: like a rest stop — it gathers everything remaining.
+
+Spread: like spreading butter — it spreads values out.
+
+*/
+
+printArgs("a", "b", "c", "d");
+printArgsModern("a", "b", "c", "d");
 
