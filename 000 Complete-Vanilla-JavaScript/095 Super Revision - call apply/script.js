@@ -106,3 +106,4 @@ Use Case: Logging, debugging, or handling events in different object contexts us
 
 */
 
+// https://chatgpt.com/c/687a90af-b3e4-8009-93e2-f8e9872eb025

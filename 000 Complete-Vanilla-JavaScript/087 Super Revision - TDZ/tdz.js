@@ -19,3 +19,12 @@ function showTDZExample() {
   }
 }
 showTDZExample();
+
+
+console.log(typeof a); // undefined
+console.log(typeof b); // ❌ ReferenceError
+let b = 10;
+
+/* 
+typeof does NOT protect you from TDZ if variable is declared with let/const
+*/
