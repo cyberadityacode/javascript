@@ -28,4 +28,29 @@ Think of .call() like giving someone a speech and saying:
 You're temporarily assigning a role (object) to a script (function).
 */
 
+/* 
+Real-World Use Cases of call method 
+*/
+// 1. Borrowing a Method from One Object to Another
+
+// You have an object with a method, and you want to use that method for another object without copying the method.
+
+const person1 = {
+  name: "alpha",
+  greet(age) {
+    console.log(`Hi, I am ${this.name}, age ${age}`);
+  },
+};
+
+const person2 = {
+  name: "beta",
+};
+// Borrow `greet` from person1 using `call`
+
+person1.greet.call(person2, 10);
+
+/* 
+ Use Case: Sharing a common method across different users or objects without duplicating code.
+*/
+
 

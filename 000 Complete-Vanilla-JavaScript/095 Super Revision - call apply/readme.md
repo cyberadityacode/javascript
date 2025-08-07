@@ -21,3 +21,17 @@ That’s what .call() does — it lets you say:
 - You use it when you want a function to act on behalf of an object.
 
 - You can also pass extra arguments to the function.
+
+# real-world use cases of .call()
+
+## What Is .call() Used For?
+
+.call() is typically used when you want to:
+
+- Reuse functions across different objects.
+
+- Change the context (this) temporarily when running a function.
+
+- Work with array-like objects (like arguments, NodeLists).
+
+- Borrow methods from other objects.
