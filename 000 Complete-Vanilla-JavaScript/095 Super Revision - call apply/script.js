@@ -78,7 +78,31 @@ Rest: like a rest stop — it gathers everything remaining.
 Spread: like spreading butter — it spreads values out.
 
 */
-
+// debugger
 printArgs("a", "b", "c", "d");
 printArgsModern("a", "b", "c", "d");
+
+// Calling Functions Dynamically with Context
+/* 
+In event-based or callback-driven code, 
+you may have a shared handler that you want to run in the context of 
+different objects.
+*/
+
+const logger = {
+  log() {
+    console.log(`${this.label}: ${this.message}`);
+  },
+};
+
+const error = { label: "Error", message: "Something went wrong" };
+const info = { label: "Info", message: "All Good" };
+
+logger.log.call(error); // Error:Something went wrong
+logger.log.call(info); // Info:All Good
+
+/* 
+Use Case: Logging, debugging, or handling events in different object contexts using a shared function.
+
+*/
 
