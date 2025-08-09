@@ -107,3 +107,15 @@ Use Case: Logging, debugging, or handling events in different object contexts us
 */
 
 // https://chatgpt.com/c/687a90af-b3e4-8009-93e2-f8e9872eb025
+
+// call() → passes arguments individually.
+
+// apply() → passes arguments as an array.
+
+function greeting(greeting, punctuation) {
+  console.log(`${greeting}, ${this.name}${punctuation}`);
+}
+
+const personG = { name: "aditya" };
+greeting.call(personG, "Hello", "!"); //Hello aditya!
+greeting.apply(personG, ["Hello", "!"]); //Hello aditya!
