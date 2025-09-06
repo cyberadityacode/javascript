@@ -119,3 +119,19 @@ function greeting(greeting, punctuation) {
 const personG = { name: "aditya" };
 greeting.call(personG, "Hello", "!"); //Hello aditya!
 greeting.apply(personG, ["Hello", "!"]); //Hello aditya!
+
+
+/* Predict the output */
+
+const obj = {
+  name: "Hero",
+  getName: function () {
+    return this.name;
+  },
+};
+
+const getName = obj.getName;
+console.log(getName()); // Hello
+
+const getNameFixed = obj.getName.bind(obj);
+console.log(getNameFixed()); // Hero
