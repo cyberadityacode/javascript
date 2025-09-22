@@ -32,3 +32,13 @@ const fodderColorsArray = [
 // How many times does "red" appear in the fodderColorsArray?
 const output = fodderColorsArray.filter((c) => c === "red").length;
 console.log(output);
+
+// I want to count how many times each color in colorsArray appears in fodderColorsArray
+
+const colorCounts = {};
+
+colorsArray.forEach((color) => {
+  colorCounts[color] = fodderColorsArray.filter((c) => c === color).length;
+});
+
+console.log(colorCounts);
