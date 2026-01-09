@@ -1,2 +1,6 @@
-# javascript
-Javascript projects from novice to pro
+# JavaScript
+
+Complete Javascript Learning module from novice to pro.
+
+Aditya Dubey
+cyberadityacode
